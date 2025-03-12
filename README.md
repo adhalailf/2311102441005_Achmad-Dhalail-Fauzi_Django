@@ -9,3 +9,23 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang 101 tutorial va
 ## Ada apa saja di website ini?
 - Tutorial variasi workout
 - Informasi seputar fitness life
+
+## Bagaimana Menjalankannya?
+1. Clone repository ini
+```shell
+git clone https://github.com/adhalailf/2311102441005_Achmad-Dhalail-Fauzi_Django.git
+```
+2. Kedua buat virtual environment.
+```shell
+# Universal Python
+python -m venv .venv
+```
+3. Aktifkan virtual environment.
+```shell
+# Windows
+dir..\.venv\Scripts\activate
+```
+4. Terakhir install framework django.
+```shell
+pip install django
+```
