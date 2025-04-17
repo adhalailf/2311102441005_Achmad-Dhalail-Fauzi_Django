@@ -2,7 +2,7 @@
 from django.shortcuts import render #render berfungsi untuk mengembalikan halaman html
 
 def home(request):
-    template_name = 'home.html'
+    template_name = 'halaman/index.html'
     context = {
         'title': 'Home',
         'content': 'Welcome to GymBuddy!',
