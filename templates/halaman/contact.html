@@ -1,0 +1,130 @@
+{% extends 'halaman/base.html' %}
+{% load static %}
+
+{% block content %}
+  <main class="main-content">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="{% static 'halaman/assets/img/about/about.jpg' %}">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-content content-style2">
+              <h2 class="title"><span>CONTACT </span>US</h2>
+              <div class="desc">
+                <p>Have questions, need more information, or ready to join our fitness community?<br>Don’t hesitate to reach out — we're here to support your fitness journey!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Page Title Area ==-->
+
+    <!--== Start Contact Area ==-->
+    <section class="contact-area position-relative">
+      <div class="contact-page-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-title text-center">
+                  <h2 class="title">GET IN <span>TOUCH</span></h2>
+                  <div class="desc">
+                    <p>Contact us if you neeed information</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="contact-info-content">
+                <div class="contact-info-item">
+                  <div class="icon">
+                    <img class="icon-img" src="{% static 'halaman/assets/img/icons/c1.png' %}" alt="Icon">
+                  </div>
+                  <div class="content">
+                    <p>JL. KH. Wahid Hasyim 2,<br>KOMPLEK GELORA KADRIE OENING<br>Sempaja Selatan, Kota Samarinda, Indonesia</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="icon">
+                    <img class="icon-img" src="{% static 'halaman/assets/img/icons/c2.png' %}" alt="Icon">
+                  </div>
+                  <div class="content">
+                    <a href="tel://0811552347">081 155 2347</a>
+                    <a href="tel://(0541)411391">(0541)411391</a>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="icon">
+                    <img class="icon-img" src="{% static 'halaman/assets/img/icons/c3.png' %}" alt="Icon">
+                  </div>
+                  <div class="content">
+                    <a href="mailto://info@example.com">info@example.com</a>
+                    <a href="">www.gymbuddy.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="contact-form mb-md-90">
+                <form class="contact-form-wrapper" id="contact-form" action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="section-title">
+                        <h2 class="title">Send Message</h2>
+                        <div class="desc">
+                          <p>If you need any information, feel free to send me message I will try to answer your and give you proper tips about your message</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="row row-gutter-12">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input class="form-control" type="text" name="con_name" placeholder="Name">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input class="form-control" type="email" name="con_email" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group mb-0">
+                            <textarea name="con_message" placeholder="Write message here"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group mb-0">
+                            <button class="btn btn-theme" type="submit">SEND MESSAGE</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- Message Notification -->
+              <div class="form-message"></div>
+            </div>
+            <div class="col-lg-6">
+              <div class="contact-map-area">              
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.7117724507361!2d117.15852419210124!3d-0.4519801441963518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67922d0e6f52f%3A0x41c4ad834a2ab17a!2sFITNESS%20SOLUTION%20TOWER%20KADRIE%20OENING!5e0!3m2!1sen!2sid!4v1746613113355!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape-group">
+          <div class="shape-img5">
+            <img src="{% static 'halaman/assets/img/photos/shp1.png' %}" alt="Image">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Contact Area ==-->
+  </main>
+{% endblock content %}

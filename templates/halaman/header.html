@@ -4,7 +4,7 @@
       <div class="row row-gutter-0 align-items-center">
         <div class="col-4 col-xs-3 col-sm-3 col-md-3 col-xl-3">
           <div class="header-logo-area">
-            <a href="index.html">
+            <a href="">
               <img class="logo-main" src="{% static 'halaman/assets/img/gymbuddytr.png' %}" alt="Logo" />
               <img class="logo-light" src="{% static 'halaman/assets/img/gymbuddytr.png' %}" alt="Logo" />
             </a>
@@ -14,8 +14,8 @@
           <div class="header-align">
             <div class="header-navigation-area d-none d-xl-block">
               <ul class="main-menu nav position-relative">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="halaman/about.html">About</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li class="has-submenu"><a href="{% static 'halaman/classes.html'%}">Classes</a>
                   <ul class="submenu-nav">
                     <li><a href="{% static 'halaman/classes.html'%}">Classes</a></li>
@@ -52,7 +52,7 @@
                     <li><a href="blog-details-no-sidebar.html">Blog Details No Sidebar</a></li>
                   </ul>-->
                 </li>
-                <li><a href="{% static 'halaman/contact.html'%}">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
               </ul>
             </div>

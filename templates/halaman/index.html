@@ -59,9 +59,9 @@
   <!--== End Preloader Content ==-->
 
   <!--== Start Header Wrapper ==-->
-  <!--{% block header %}-->
+  {% block header %}
   {% include 'halaman/header.html' %}
-  <!--{% endblock %}-->
+  {% endblock %}
   <!--== End Header Wrapper ==-->
   
   <main class="main-content">
@@ -89,11 +89,11 @@
                           </div>
                         </div>
                       </div>
-                      <!-- noneed <div class="col-md-7 col-lg-7">
+                      <div class="col-md-7 col-lg-7">
                         <div class="slider-thumb">
-                          <img src="{% static 'halaman/assets/img/slider/h-1.webp'}" alt="Image">
+                          <!-- <img src="{% static 'halaman/assets/img/photos/shp1.png'}" alt="Image"> -->
                         </div>
-                      </div>-->
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -213,311 +213,6 @@
     </section>
     <!--== End About Area ==-->
 
-    <!--== Start Features Area Wrapper
-    <section class="features-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="featured-columns-wrap">
-              <div class="featured-items-style2 bg-img" data-bg-img="assets/img/photos/bg-f2.jpg">
-                <div class="row row-gutter-0">
-                  <div class="col-md-6">
-                    <!-- Start Featured Item --
-                    <div class="featured-item">
-                      <div class="featured-icon">
-                        <img src="assets/img/icons/f1.png" alt="Image">
-                      </div>
-                      <div class="featured-info">
-                        <h4>Best Training</h4>
-                        <p>Best Training dolor sit consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore</p>
-                      </div>
-                    </div>
-                    <!-- End Featured Item --
-                  </div>
-                  <div class="col-md-6">
-                    <!-- Start Featured Item --
-                    <div class="featured-item">
-                      <div class="featured-icon">
-                        <img src="assets/img/icons/f2.png" alt="Image">
-                      </div>
-                      <div class="featured-info">
-                        <h4>Qualified Instructor</h4>
-                        <p>Qualified Instructor consectetur adipg elit, sed do eiusmod tempor incididu ut labore  dolore are same magna </p>
-                      </div>
-                    </div>--
-                    <!-- End Featured Item --
-                  </div>
-                  <div class="col-md-6">
-                    <!-- Start Featured Item --
-                    <div class="featured-item">
-                      <div class="featured-icon">
-                        <img src="assets/img/icons/f3.png" alt="Image">
-                      </div>
-                      <div class="featured-info">
-                        <h4>Latest Equipment</h4>
-                        <p class="m-0">Latest equipment dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                      </div>
-                    </div>
-                    <!-- End Featured Item --
-                  </div>
-                  <div class="col-md-6">
-                    <!-- Start Featured Item --
-                    <div class="featured-item">
-                      <div class="featured-icon">
-                        <img src="assets/img/icons/f4.png" alt="Image">
-                      </div>
-                      <div class="featured-info">
-                        <h4>Award Winners</h4>
-                        <p class="m-0">Award winner dolor sit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                      </div>
-                    </div>
-                    <!-- End Featured Item --
-                  </div>
-                </div>
-              </div>
-              <div class="featured-discount-item">
-                <div class="thumb" data-bg-img="assets/img/photos/f1.jpg"></div>
-                <div class="content">
-                  <h2>35%</h2>
-                  <h3>DISCOUNT</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    End Features Area Wrapper ==-->
-
-    <!--== Start Service Area ==-->
-    <section class="service-area service-default-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
-              <h2 class="title"><span>CLASSES </span>WE PROVIDE</h2>
-              <div class="desc">
-                <p>Gym classes are designed to suit all fitness levels and goals.<br>From strength and endurance to flexibility and self-defense — we’ve got you covered:</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row" data-aos="fade-up" data-aos-duration="1100">
-          <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
-            <div class="row">
-              <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                  <div class="inner-content">
-                    <div class="thumb">
-                      <a href="class-details.html"><span><img src="{% static 'halaman/assets/img/service/bdbldr.jpg' %}" alt="Image"></span></a>
-                    </div>
-                    <div class="content">
-                      <h4 class="title"><a href="class-details.html">BODY BUILDING CLASS</a></h4>
-                      <h4 class="class-time">Duration 50 Minutes</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                  <div class="inner-content">
-                    <div class="thumb">
-                      <a href="class-details.html"><span><img src="{% static 'halaman/assets/img/service/calisthenic.jpg' %}" alt="Image"></span></a>
-                    </div>
-                    <div class="content">
-                      <h4 class="title"><a href="class-details.html">CALISTHENIC CLASS</a></h4>
-                      <h4 class="class-time">Duration 45 Minutes</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                  <div class="inner-content">
-                    <div class="thumb">
-                      <a href="class-details.html"><span><img src="{% static 'halaman/assets/img/service/cross.jpg' %}" alt="Image"></span></a>
-                    </div>
-                    <div class="content">
-                      <h4 class="title"><a href="class-details.html">CROSSFIT CLASS</a></h4>
-                      <h4 class="class-time">Duration 35 Minutes</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                  <div class="inner-content">
-                    <div class="thumb">
-                      <a href="class-details.html"><span><img src="{% static 'halaman/assets/img/service/yoga.jpg' %}" alt="Image"></span></a>
-                    </div>
-                    <div class="content">
-                      <h4 class="title"><a href="class-details.html">YOGA CLASS</a></h4>
-                      <h4 class="class-time">Duration 25 Minutes</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                  <div class="inner-content">
-                    <div class="thumb">
-                      <a href="class-details.html"><span><img src="{% static 'halaman/assets/img/service/mtarts.jpg' %}" alt="Image"></span></a>
-                    </div>
-                    <div class="content">
-                      <h4 class="title"><a href="class-details.html">MARTIAL ART CLASS</a></h4>
-                      <h4 class="class-time">Duration 30 Minutes</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                  <div class="inner-content">
-                    <div class="thumb">
-                      <a href="class-details.html"><span><img src="{% static 'halaman/assets/img/service/cardio.jpg' %}" alt="Image"></span></a>
-                    </div>
-                    <div class="content">
-                      <h4 class="title"><a href="class-details.html">CARDIO CLASS</a></h4>
-                      <h4 class="class-time">Duration 40 Minutes</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Service Area ==-->
-
-    <!--== Start Service Area ==-->
-    <section class="classical-workout-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="classical-workout-wrap bg-img" data-bg-img="{% static 'halaman/assets/img/photos/wo1.bg.jpg' %}">
-              <div class="column-left bg-img" data-bg-img="{% static 'halaman/assets/img/photos/wo2.bg.jpg' %}" data-aos="fade-right" data-aos-duration="1000">
-                <div class="content">
-                  <h2 class="title">CLASSICAL<br>WORKOUT</h2>
-                  <p>Back to basics, built for results.
-                    <br>Explore time-tested training routines that focus on strength, form, and endurance.</p>
-                  <a class="btn-link" href="classes.html">VIEW SCHEDULE</a>
-                </div>
-              </div>
-              <div class="shape-style" data-aos="fade-right" data-aos-duration="1000"></div>
-              <div class="column-right">
-                <div class="workout-items">
-                  <div class="workout-item">
-                    <div class="thumb">
-                      <img src="{% static 'halaman/assets/img/photos/dbb1.jpg' %}" alt="Image">
-                    </div>
-                    <div class="content">
-                      <h3>01.</h3>
-                    </div>
-                  </div>
-                  <div class="workout-item">
-                    <div class="thumb">
-                      <img src="{% static 'halaman/assets/img/photos/dbb2.jpg' %}" alt="Image">
-                    </div>
-                    <div class="content">
-                      <h3>02.</h3>
-                    </div>
-                  </div>
-                  <div class="workout-item mb-0 mb-xxs-40">
-                    <div class="thumb">
-                      <img src="{% static 'halaman/assets/img/photos/bbb1.jpg' %}" alt="Image">
-                    </div>
-                    <div class="content">
-                      <h3>03.</h3>
-                    </div>
-                  </div>
-                  <div class="workout-item mb-0">
-                    <div class="thumb">
-                      <img src="{% static 'halaman/assets/img/photos/bbb2.jpg' %}" alt="Image">
-                    </div>
-                    <div class="content">
-                      <h3>04.</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Service Area ==-->
-
-    <!--== Start Gallery Slider Area Wrapper ==-->
-    <section class="gallery-area gallery-default-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-xl-4 pr-0">
-            <div class="section-title stitle-style2" data-aos="fade-up" data-aos-duration="1000">
-              <div class="subtitle">FITNESS GALLERY</div>
-              <h2 class="title">BELIEVE IN <span>YOURSELF, <br>BE FIT </span>& HEALTHIER</h2>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-8 d-none d-md-block text-center text-md-end">
-            <a href="classes.html" class="btn-theme">VIEW ALL</a>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid p-0">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="gallery-slider-content">
-              <div class="swiper-container gallery-slider-container">
-                <div class="swiper-wrapper gallery-slider">
-                  <div class="swiper-slide">
-                    <div class="gallery-item">
-                      <div class="thumb">
-                        <a class="lightbox-image" data-fancybox="gallery" href="{% static 'halaman/assets/img/gallery/bd.jpg' %}"><img src="{% static 'halaman/assets/img/gallery/bd.jpg' %}" alt="Image"></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="gallery-item">
-                      <div class="thumb">
-                        <a class="lightbox-image" data-fancybox="gallery" href="{% static 'halaman/assets/img/gallery/mt.jpg' %}"><img src="{% static 'halaman/assets/img/gallery/mt.jpg' %}" alt="Image"></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="gallery-item">
-                      <div class="thumb">
-                        <a class="lightbox-image" data-fancybox="gallery" href="{% static 'halaman/assets/img/gallery/rp.jpg' %}"><img src="{% static 'halaman/assets/img/gallery/rp.jpg' %}" alt="Image"></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="gallery-item">
-                      <div class="thumb">
-                        <a class="lightbox-image" data-fancybox="gallery" href="{% static 'halaman/assets/img/gallery/clt.jpg' %}"><img src="{% static 'halaman/assets/img/gallery/clt.jpg' %}" alt="Image"></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Gallery Slider Area Wrapper ==-->
-
     <!--== Start Team Area ==-->
     <section class="team-area team-default-area">
       <div class="container">
@@ -526,7 +221,7 @@
             <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
               <h2 class="title">PROFESSIONAL <span>INSTRUCTORS</span></h2>
               <div class="desc">
-                <p>Gym classes dolor sit amet, consectetur adipiscing elit, sed do eiod tempor <br>didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
+                <p>Our certified and experienced instructors are here to guide, motivate, and push you to achieve your fitness goals <br>Whether you're a beginner or an athlete, our professional trainers will tailor every workout to suit your needs and maximize your progress.</p>
               </div>
             </div>
           </div>
@@ -641,126 +336,6 @@
     </section>
     <!--== End Team Area ==-->
 
-    <!--== Start Testimonial Area ==-->
-    <!--<section class="testimonial-area testimonial-default-area position-relative">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="section-title stitle-style2">
-              <div class="subtitle">TESTIMONIALS</div>
-              <h2 class="title">THAT’S <span>WHAT OUR<br>CLIENT </span>SAYS</h2>
-            </div>
-            <div class="testimonial-content" data-aos="fade-up" data-aos-duration="1000">
-              <div class="testimonial-slider-content">
-                <div class="swiper-container testimonial-slider-container">
-                  <div class="swiper-wrapper testimonial-slider">
-                    <div class="swiper-slide testimonial-single">
-                      <div class="client-content">
-                        <p>“Getshape is very smart and technical sound gym, which maintain professional trainer as well as modern equipments. to maintain our health luptas sit fugit, sed quia cuuntur mag dolores eos qui rat ione volupta pleasure rationally”</p>
-                        <img class="quote-icon" src="assets/img/icons/quote-icon.png" alt="Icon">
-                      </div>
-                      <div class="client-info">
-                        <h4 class="name">Stephen Fleming</h4>
-                        <h6 class="designation">Mariland, USA</h6>
-                      </div>
-                    </div>
-                    <div class="swiper-slide testimonial-single">
-                      <div class="client-content">
-                        <p>“Getshape is very smart and technical sound gym, which maintain professional trainer as well as modern equipments. to maintain our health luptas sit fugit, sed quia cuuntur mag dolores eos qui rat ione volupta pleasure rationally”</p>
-                        <img class="quote-icon" src="assets/img/icons/quote-icon.png" alt="Icon">
-                      </div>
-                      <div class="client-info">
-                        <h4 class="name">Stephen Fleming</h4>
-                        <h6 class="designation">Mariland, USA</h6>
-                      </div>
-                    </div>
-                    <div class="swiper-slide testimonial-single">
-                      <div class="client-content">
-                        <p>“Getshape is very smart and technical sound gym, which maintain professional trainer as well as modern equipments. to maintain our health luptas sit fugit, sed quia cuuntur mag dolores eos qui rat ione volupta pleasure rationally”</p>
-                        <img class="quote-icon" src="assets/img/icons/quote-icon.png" alt="Icon">
-                      </div>
-                      <div class="client-info">
-                        <h4 class="name">Stephen Fleming</h4>
-                        <h6 class="designation">Mariland, USA</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Add Arrows --
-                  <div class="swiper-btn-wrap">
-                    <div class="swiper-btn-prev"><i class="fa fa-angle-left"></i></div>
-                    <div class="swiper-btn-next"><i class="fa fa-angle-right"></i></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="bmi-calc-form bg-img" data-bg-img="assets/img/testimonial/1.jpg">
-              <div class="section-title text-center mt-0">
-                <h2 class="title">BMI <span>CALCULATOR</span></h2>
-                <div class="desc">
-                  <p>BMI is a reliable guide to estimate the healthy weight range based on height, wight and age</p>
-                </div>
-              </div>
-              <form action="#/">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Height / cm">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Weight / kg">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Age">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <select class="form-control form-select" aria-label="gender select example">
-                        <option selected>Gender</option>
-                        <option value="1">Female</option>
-                        <option value="2">Male</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <select class="form-control form-select" aria-label="activity select example">
-                        <option selected>Select an activity factor</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="bmi-calc-form-footer">
-                      <div class="form-group mb-0">
-                        <button class="btn btn-theme" type="button">CALCULATE</button>
-                      </div>
-                      <div class="bmi-calc-result">
-                        <input class="form-control" type="text" placeholder="0.0">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="shape-group">
-        <div class="shape-img2">
-          <img src="assets/img/photos/shape1.png" alt="Image">
-        </div>
-      </div>
-    </section>
-    !--== End Testimonial Area ==-->
-
     <!--== Start Blog Area Wrapper ==-->
     <section class="blog-area blog-default-area">
       <div class="container">
@@ -775,72 +350,41 @@
             </div>
           </div>
         </div>
-        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row">
+          {%for artikel in data_artikel%}
           <div class="col-md-6 col-lg-4">
             <!--== Start Blog Post Item ==-->
             <div class="post-item mb-md-30">
               <div class="thumb">
-                <a href="blog-details.html"><img src="{% static 'halaman/assets/img/blog/dl.jpg' %}" alt="Image"></a>
+                {% if artikel.thumbnail %}
+                  <img class="img img-raised" src="{{ artikel.thumbnail.url }}" alt="Image"></a>
+                {% else %}
+                  <img src="{% static 'halaman/assets/img/blog/a01.png' %}" alt="No Image Available">
+                {% endif %}
               </div>
               <div class="content">
                 <div class="meta">
-                  <a class="category" href="blog.html"><i class="fa fa-tags icon"></i><span> FITNESS</span></a>
-                  <a class="post-date" href="blog.html"><i class="fa fa-calendar icon"></i><span> 05 MAY, 2023</span></a>
+                  <a class="category" href="#"><i class="fa fa-tags icon"></i><span>{{ artikel.kategori }}</span></a>
+                  <a class="post-date" href="#"><i class="fa fa-calendar icon"></i><span>{{artikel.created_at }}</span></a>
                 </div>
                 <h4 class="title">
-                  <a href="blog-details.html">Perfect workout is the way to shape your body and mind</a>
+                  <a href="{% url 'detail_artikel' artikel.slug %}">{{ artikel.judul }}</a>
                 </h4>
-                <p>Gym is very important to maintain our health quia cuuntur magni dolores eos pleasure of mind and make you more healthier</p>
+                <p style="text-align: justify;">{{ artikel.isi | truncatechars:200 }}<a href="{% url 'detail_artikel' artikel.slug %}">Read More</a></p>
               </div>
             </div>
             <!--== End Blog Post Item ==-->
           </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Blog Post Item ==-->
-            <div class="post-item mb-md-30">
-              <div class="thumb">
-                <a href="blog-details.html"><img src="{% static 'halaman/assets/img/blog/bp.jpg' %}" alt="Image"></a>
-              </div>
-              <div class="content">
-                <div class="meta">
-                  <a class="category" href="blog.html"><i class="fa fa-tags icon"></i><span> YOGA</span></a>
-                  <a class="post-date" href="blog.html"><i class="fa fa-calendar icon"></i><span> 04 MAY, 2023</span></a>
-                </div>
-                <h4 class="title">
-                  <a href="blog-details.html">How to perfectly do your bench-press to avoid injury</a>
-                </h4>
-                <p>Gym is very important to maintain our health quia cuuntur magni dolores eos pleasure of mind and make you more healthier</p>
-              </div>
-            </div>
-            <!--== End Blog Post Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Blog Post Item ==-->
-            <div class="post-item">
-              <div class="thumb">
-                <a href="blog-details.html"><img src="{% static 'halaman/assets/img/blog/sq.jpg' %}" alt="Image"></a>
-              </div>
-              <div class="content">
-                <div class="meta">
-                  <a class="category" href="blog.html"><i class="fa fa-tags icon"></i><span> BODYBUILD</span></a>
-                  <a class="post-date" href="blog.html"><i class="fa fa-calendar icon"></i><span> 02 MAY, 2023</span></a>
-                </div>
-                <h4 class="title">
-                  <a href="blog-details.html">Give more time in workout for a  great shape that you want</a>
-                </h4>
-                <p>Gym is very important to maintain our health quia cuuntur magni dolores eos pleasure of mind and make you more healthier</p>
-              </div>
-            </div>
-            <!--== End Blog Post Item ==-->
-          </div>
+          {%endfor%}
         </div>
-      </div>
     </section>
     <!--== End Blog Area Wrapper ==-->
   </main>
 
   <!--== Start Footer Area Wrapper ==-->
+  {% block footer %}
   {% include 'halaman/footer.html' %}
+  {% endblock %}  
   <!--== End Footer Area Wrapper ==-->
   
   <!--== Scroll Top Button ==-->
@@ -916,6 +460,7 @@
 
 <!--=== Custom Js ===-->
 <script src="{% static 'halaman/assets/js/custom.js' %}"></script>
+
 
 </body>
 
