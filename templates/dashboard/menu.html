@@ -21,19 +21,19 @@
     <div class="sidebar-wrapper">
       <div class="user">
         <div class="photo">
-          <img src="{% static 'dashboard/assets/img/IMG_4068.JPG' %}" />
+          <img src="{% static 'dashboard/assets/img/profile.png' %}" />
         </div>
         <div class="info">
           <a data-toggle="collapse" href="#collapseExample" class="collapsed">
             <span>
-              adhalailf
+              {{ user.username }}
               <b class="caret"></b>
             </span>
           </a>
           <div class="clearfix"></div>
           <div class="collapse" id="collapseExample">
             <ul class="nav">
-              <li>
+              <!-- <li>
                 <a href="#">
                   <span class="sidebar-mini-icon">MP</span>
                   <span class="sidebar-normal">My Profile</span>
@@ -44,11 +44,11 @@
                   <span class="sidebar-mini-icon">EP</span>
                   <span class="sidebar-normal">Edit Profile</span>
                 </a>
-              </li>
+              </li> -->
               <li>
-                <a href="#">
-                  <span class="sidebar-mini-icon">S</span>
-                  <span class="sidebar-normal">Settings</span>
+                <a href="{% url 'acc_logout' %}">
+                  <span class="sidebar-mini-icon">L</span>
+                  <span class="sidebar-normal">Logout</span>
                 </a>
               </li>
             </ul>

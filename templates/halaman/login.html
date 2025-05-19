@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Account - GymBuddy</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="{% static 'halaman/assets/img/favicon.ico' %}" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:400" rel="stylesheet">
+
+    <!--== Bootstrap CSS ==-->
+    <link href="{% static 'halaman/assets/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <!--== Font-awesome Icons CSS ==-->
+    <link href="{% static 'halaman/assets/css/font-awesome.min.css' %}" rel="stylesheet"/>
+    <!--== Pe Icon 7 Min Icons CSS ==-->
+    <link href="{% static 'halaman/assets/css/pe-icon-7-stroke.min.css' %}" rel="stylesheet"/>
+    <!--== Animate CSS ==-->
+    <link href="{% static 'halaman/assets/css/animate.css' %}" rel="stylesheet"/>
+    <!--== Aos CSS ==-->
+    <link href="{% static 'halaman/assets/css/aos.css' %}" rel="stylesheet"/>
+    <!--== FancyBox CSS ==-->
+    <link href="{% static 'halaman/assets/css/jquery.fancybox.min.css' %}" rel="stylesheet"/>
+    <!--== Slicknav CSS ==-->
+    <link href="{% static 'halaman/assets/css/slicknav.css' %}" rel="stylesheet"/>
+    <!--== Swipe{% static halaman/r CSS ==-->
+    <link href="{% static 'halaman/assets/css/swiper.min.css' %}" rel="stylesheet"/>
+    <!--== Slick CSS ==-->
+    <link href="{% static 'halaman/assets/css/slick.css' %}" rel="stylesheet"/>
+    <!--== Main Style CSS ==-->
+    <link href="{% static 'halaman/assets/css/style.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!--wrapper start-->
+<div class="wrapper">
+
+  <!--== Start Preloader Content ==-->
+  <div class="preloader-wrap">
+    <div class="preloader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!--== End Preloader Content ==-->
+
+  <!--== Start Header Wrapper ==-->
+ <header class="header-area header-default header-transparent header-style sticky-header">
+    <div class="container">
+      <div class="row row-gutter-0 align-items-center">
+        <div class="col-4 col-xs-3 col-sm-3 col-md-3 col-xl-3">
+          <div class="header-logo-area">
+            <a href="{% url 'home' %}">
+              <img class="logo-main" src="{% static 'halaman/assets/img/gymbuddytr.png' %}" alt="Logo" />
+              <img class="logo-light" src="{% static 'halaman/assets/img/gymbuddytr.png' %}" alt="Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="col-8 col-sm-9 col-xl-9">
+          <div class="header-align">
+            <div class="header-navigation-area d-none d-xl-block">
+              <ul class="main-menu nav position-relative">
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </div>
+            <div class="header-navigation-area d-none d-xl-block">
+              <ul class="main-menu nav position-relative">
+                <li><a href="{% url 'acc_regist' %}">Register</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--== End Header Wrapper ==-->
+  
+  <main class="main-content">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="{% static 'halaman/assets/img/about/about.jpg' %}">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-content content-style2">
+              <h2 class="title"><span>MY</span> ACCOUNT</h2>
+              <div class="desc">
+                <p class="ml-0">Selamat Datang Kembali!<br>Masuk ke akunmu untuk melanjutkan latihan, mengatur jadwal, dan melihat progres fitnesmu. Tetap semangat menuju tubuh yang lebih sehat dan bugar!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Page Title Area ==-->
+
+    <!--== Start Contact Area ==-->
+    <div class="account-login-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 m-auto">
+            <!-- <div class="login-top">
+              <nav class="login-form-nav">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Login</button>
+
+                </div>
+              </nav>
+            </div> -->
+            <div class="login-bottom">
+              <div class="login-form-content tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="login-form">
+                    <form class="login-form-wrapper" id="login-form" method="POST">
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <p class="description text-center text-danger">{{ msg }}</p>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="UserName" class="form-label">Username *</label>
+                                <input name="username" type="text" class="form-control" id="UserName" required>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group mb-0">
+                                <label for="password" class="form-label mt-15">Password *</label>
+                                <input name="password" type="password" class="form-control" id="password" required>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group mt-15">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1"> Remember me</label>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group form-group-info">
+                                <button class="btn btn-theme btn-black" type="submit">Log in</button>
+                                <a class="btn-forgot" href="#">Lost your password?</a>
+                                <br>New User? <a class="btn-register" href="{% url 'acc_regist' %}">Create an account.</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- Message Notification -->
+                  <div class="form-message"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== End Contact Area ==-->
+  </main>
+
+  <!--== Start Footer Area Wrapper ==-->
+  {% block footer %}
+  {% include 'halaman/footer.html' %}
+  {% endblock %}
+  <!--== End Footer Area Wrapper ==-->
+  
+  <!--== Scroll Top Button ==-->
+  <div class="scroll-to-top"><span class="fa fa-angle-double-up"></span></div>
+
+  <!--== Start Side Menu ==-->
+  <aside class="off-canvas-wrapper">
+    <div class="off-canvas-inner">
+      <div class="off-canvas-overlay d-none"></div>
+      <!-- Start Off Canvas Content Wrapper -->
+      <div class="off-canvas-content">
+        <!-- Off Canvas Header -->
+        <div class="off-canvas-header">
+          <div class="close-action">
+            <button class="btn-close"><i class="pe-7s-close"></i></button>
+          </div>
+        </div>
+
+        <div class="off-canvas-item">
+          <!-- Start Mobile Menu Wrapper -->
+          <div class="res-mobile-menu">
+            <!-- Note Content Auto Generate By Jquery From Main Menu -->
+          </div>
+          <!-- End Mobile Menu Wrapper -->
+        </div>
+        <!-- Off Canvas Footer -->
+        <div class="off-canvas-footer"></div>
+      </div>
+      <!-- End Off Canvas Content Wrapper -->
+    </div>
+  </aside>
+  <!--== End Side Menu ==-->
+</div>
+
+<!--=======================Javascript============================-->
+
+<!--=== Modernizr Min Js ===-->
+<script src="{%static '/halaman/assets/js/modernizr.js'%}"></script>
+<!--=== jQuery Min Js ===-->
+<script src="{% static 'halaman/assets/js/jquery-main.js' %}"></script>
+<!--=== jQuery Migration Min Js ===-->
+<script src="{% static 'halaman/assets/js/jquery-migrate.js' %}"></script>
+<!--=== Popper Min Js ===-->
+<script src="{% static 'halaman/assets/js/popper.min.js' %}"></script>
+<!--=== Bootstrap Min Js ===-->
+<script src="{% static 'halaman/assets/js/bootstrap.min.js' %}"></script>
+<!--=== jquery Appear Js ===-->
+<script src="{% static 'halaman/assets/js/jquery.appear.js' %}"></script>
+<!--=== jquery Swiper Min Js ===-->
+<script src="{% static 'halaman/assets/js/swiper.min.js' %}"></script>
+<!--=== jquery Fancybox Min Js ===-->
+<script src="{% static 'halaman/assets/js/fancybox.min.js' %}"></script>
+<!--=== jquery Aos Min Js ===-->
+<script src="{% static 'halaman/assets/js/aos.min.js' %}"></script>
+<!--=== jquery Slicknav Js ===-->
+<script src="{% static 'halaman/assets/js/jquery.slicknav.js' %}"></script>
+<!--=== jquery Countdown Js ===-->
+<script src="{% static 'halaman/assets/js/jquery.countdown.min.js' %}"></script>
+<!--=== jquery Tippy Js ===-->
+<script src="{% static 'halaman/assets/js/tippy.all.min.js' %}"></script>
+<!--=== Isotope Min Js ===-->
+<script src="{% static 'halaman/assets/js/isotope.pkgd.min.js' %}"></script>
+<!--=== jquery Vivus Js ===-->
+<script src="{% static 'halaman/assets/js/vivus.js' %}"></script>
+<!--=== Parallax Min Js ===-->
+<script src="{% static 'halaman/assets/js/parallax.min.js'  %}"></script>
+<!--=== Slick  Min Js ===-->
+<script src="{% static 'halaman/assets/js/slick.min.js' %}"></script>
+<!--=== jquery Wow Min Js ===-->
+<script src="{% static 'halaman/assets/js/wow.min.js' %}"></script>
+<!--=== jquery Zoom Min Js ===-->
+<script src="{% static 'halaman/assets/js/jquery-zoom.min.js' %}"></script>
+
+<!--=== Custom Js ===-->
+<script src="{% static 'halaman/assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>

@@ -14,7 +14,9 @@
           <div class="header-align">
             <div class="header-navigation-area d-none d-xl-block">
               <ul class="main-menu nav position-relative">
-                <li><a href="">Home</a></li>
+                {% if request.resolver_match.url_name != 'home' %}
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% endif %}
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li class="has-submenu"><a href="{% static 'halaman/classes.html'%}">Classes</a>
                   <ul class="submenu-nav">
@@ -53,7 +55,11 @@
                   </ul>-->
                 </li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
+                {% if user.is_authenticated %}
                 <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                {% else %}
+                <li><a href="{% url 'acc_login' %}">Login</a></li>
+                {% endif %}
               </ul>
             </div>
             <!-- no need for now, cart button is not used, related to shop page, v2 : cart button used for dashboard button
