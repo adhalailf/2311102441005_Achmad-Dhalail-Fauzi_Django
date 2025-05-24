@@ -1,8 +1,16 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required, user_passes_test
 from berita.models import Kategori, Artikel
 from berita.forms import ArtikelForm
 
 # Create your views here.
+def is_operator(user):
+    if user.groups.filter(name='Operator').exists():
+        return True
+    else:
+        return False
+
+@login_required
 def dashboard(request):
     template_name = 'dashboard/index.html'
     context = {
@@ -10,6 +18,8 @@ def dashboard(request):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/auth/logout')
 def kategori_list(request):
     template_name = 'dashboard/content/kategori_list.html'
     kategori = Kategori.objects.all()
@@ -20,6 +30,8 @@ def kategori_list(request):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/auth/logout')
 def kategori_add(request):
     template_name = 'dashboard/content/kategori_add.html'
     if request.method == 'POST':
@@ -36,6 +48,8 @@ def kategori_add(request):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/auth/logout')
 def kategori_upt(request, id_kat):
     template_name = 'dashboard/content/kategori_upt.html'
     try:
@@ -53,6 +67,8 @@ def kategori_upt(request, id_kat):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/auth/logout')
 def kategori_del(request, id_kat):
     try:
         Kategori.objects.get(id=id_kat).delete()
@@ -60,9 +76,14 @@ def kategori_del(request, id_kat):
         pass
     return redirect(kategori_list)
 
+@login_required
 def artikel_list(request):
     template_name = 'dashboard/content/artikel_list.html'
-    artikel = Artikel.objects.all()
+    if request.user.groups.filter(name='Operator'):
+        artikel = Artikel.objects.all()
+    else:
+        artikel = Artikel.objects.filter(author=request.user)
+    # artikel = Artikel.objects.all()
     print = (artikel)
     context = {
         'title': 'Daftar Artikel',
@@ -70,6 +91,7 @@ def artikel_list(request):
     }
     return render(request, template_name, context)
 
+@login_required
 def artikel_add(request):
     template_name = 'dashboard/content/artikel_forms.html'
     if request.method == 'POST':
@@ -89,6 +111,7 @@ def artikel_add(request):
     }
     return render(request, template_name, context)
 
+@login_required
 def artikel_detail(request, id_art):
     template_name = 'dashboard/content/artikel_detail.html'
     artikel = Artikel.objects.get(id=id_art)
@@ -98,9 +121,17 @@ def artikel_detail(request, id_art):
     }
     return render(request, template_name, context)
 
+@login_required
 def artikel_upt(request, id_art):
     template_name = 'dashboard/content/artikel_forms.html'
     artikel = Artikel.objects.get(id=id_art)
+
+    if request.user.groups.filter(name='Operator'):
+        pass
+    else:
+        if artikel.author != request.user:
+            return redirect(artikel_list)
+
     if request.method == 'POST':
         forms = ArtikelForm(request.POST, request.FILES, instance=artikel)
         if forms.is_valid():
@@ -115,9 +146,16 @@ def artikel_upt(request, id_art):
     }
     return render(request, template_name, context)
 
+@login_required
 def artikel_del(request, id_art):
     try:
-        Artikel.objects.get(id=id_art).delete()
+        artikel = Artikel.objects.get(id=id_art)
+        if request.user.groups.filter(name='Operator'):
+            pass
+        else:
+            if artikel.author != request.user:
+                return redirect(artikel_list)
+        artikel.delete()
     except:
         pass
     return redirect(artikel_list)
